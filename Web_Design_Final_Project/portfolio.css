@@ -1,0 +1,205 @@
+.portfolio-main {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.portfolio-banner {
+    background-color: #1a1f2e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-banner-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: rgb(249, 100, 0);
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.portfolio-banner-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.text-visible {
+    opacity: 1 !important; 
+    transform: translateY(0) !important; 
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-card {
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.portfolio-card-image {
+    width: 100%;
+    position: relative;
+    height: auto; 
+    overflow: visible; 
+}
+
+.portfolio-card-image img {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+.portfolio-card-content {
+    padding: 20px;
+}
+
+.portfolio-card-title {
+    font-size: 1.8rem;
+    color: rgb(249, 100, 0);
+    margin-bottom: 10px;
+}
+
+.portfolio-card-text {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+/* -------------------- Phone -------------------- */
+@media (min-width: 768px) {
+    .portfolio-title {
+        font-size: 36px;
+    }
+    
+    .portfolio-intro {
+        font-size: 18px;
+        max-width: 800px;
+    }
+    
+    .portfolio-grid {
+        gap: 50px;
+    }
+    
+    .portfolio-card-content {
+        padding: 35px 40px;
+    }
+    
+    .portfolio-card-title {
+        font-size: 1.7rem;
+    }
+    
+    .portfolio-card-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* -------------------- Tablet -------------------- */
+@media (min-width: 1024px) {
+    .portfolio-main {
+        padding: 60px 40px;
+    }
+    
+    .portfolio-hero {
+        margin-bottom: 50px;
+    }
+    
+    .portfolio-title {
+        font-size: 40px;
+    }
+    
+    .portfolio-intro {
+        font-size: 20px;
+        max-width: 900px;
+    }
+    
+    .portfolio-grid {
+        gap: 60px;
+        max-width: 1400px;
+    }
+    
+    .portfolio-card-content {
+        padding: 40px 50px;
+    }
+    
+    .portfolio-card-title {
+        font-size: 2.0rem;
+    }
+    
+    .portfolio-card-text {
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+}
+
+/* -------------------- Desktop -------------------- */
+@media (min-width: 1440px) {
+    .portfolio-main {
+        padding: 80px 60px;
+    }
+    
+    .portfolio-hero {
+        margin-bottom: 60px;
+    }
+    
+    .portfolio-title {
+        font-size: 44px;
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-intro {
+        font-size: 22px;
+        max-width: 1000px;
+    }
+    
+    .portfolio-grid {
+        gap: 70px;
+        max-width: 1600px;
+    }
+    
+    .portfolio-card {
+        border-radius: 20px;
+    }
+    
+    .portfolio-card-content {
+        padding: 50px 60px;
+    }
+    
+    .portfolio-card-title {
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .portfolio-card-text {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+}
+
+/* ⚠️ 注意：我把原来最下面的那两个 @media 删掉了！
+   因为它们设置了 max-height: 600px 和 700px，
+   如果不删掉，你在电脑上看图片还是会被切掉。 */

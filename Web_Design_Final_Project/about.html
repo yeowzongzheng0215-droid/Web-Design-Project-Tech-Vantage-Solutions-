@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About Us - TechVantage Solutions</title>
+        <link rel="icon" type="image/png" href="images/title_logo.png">
+        
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="about.css"> 
+            
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+         <header>
+            <img src="images/logo.png" alt="Tech Vantage Solutions Logo">
+
+            <nav class="navbar">
+                <a href="index.html" class="logo">Tech Vantage Solutions</a> 
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-icon">
+                    &#9776; </label>
+                <ul class="nav-links">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html" class="nav-active">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="about-main">
+            
+            <section class="about-section">
+                <h2 class="about-title scroll-animate">Company Story</h2>
+                
+                <p class="about-text scroll-animate">
+                    TechVantage Solutions was established with a singular vision: to empower organizations through superior digital innovation. Driven by a commitment to excellence, we specialize in engineering robust, scalable software systems tailored to meet complex business challenges. Beyond development, we facilitate true digital transformation by integrating cutting-edge AI-powered services that optimize operational efficiency. Furthermore, we are dedicated to bridging the industry skills gap through professional IT training, ensuring that your workforce is equipped with the knowledge and expertise required to thrive in the rapidly evolving modern digital landscape.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <h2 class="about-title scroll-animate">Vision & Mission</h2>
+                
+                <div class="about-text scroll-animate">
+                    <p><strong>Vision:</strong> To establish ourselves as a globally recognized and trusted technology partner, dedicated to driving digital excellence and fostering enduring relationships with businesses worldwide.</p>
+                    <p><strong>Mission:</strong>To deliver highly reliable, innovative, and user-centric digital solutions that empower organizations to navigate the complexities of the modern digital landscape with confidence and ease.</p>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2 class="about-title">Our Team</h2>
+                
+                <div class="about-team-container">
+                    
+                    <div class="about-member-card">
+                        <img src="images/team_zhongzheng.jpeg" alt="Member Yeow Zong Zheng">
+                        <h3>Yeow Zong Zheng</h3>
+                        <p>Web Developer / Project Manager</p>
+                    </div>
+
+                    <div class="about-member-card">
+                        <img src="images/team_changjie.jpg" alt="Member Neo Chang Jie">
+                        <h3>Neo Chang Jie</h3>
+                        <p>Web Project Developer</p>
+                    </div>
+
+                    <div class="about-member-card">
+                        <img src="images/team_yishen.jpg" alt="Member Ng Yi Shen">
+                        <h3>Ng Yi Shen</h3>
+                        <p>Web Project Developer</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <img src="images/footer_logo.png" alt="Tech Vantage Solutions Logo">
+            <h2>Your Vantage Point in Technology</h2>
+
+            <div class="footer_container">
+                <div id="footer_follow">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/" id="facebook"><b>𝐟 𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤</b></a>
+                    <a href="https://www.instagram.com/" id="instagram"><b>🅾 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</b></a>
+                    <a href="https://x.com/" id="twitter"><b>𝕏 Twitter</b></a>
+                    <a href="https://www.linkedin.com/" id="linkedin"><b>[in] Linkedln</b></a>
+                </div>
+                <div id="footer_support">
+                    <h3>Support Us</h3>
+                    <a href="contact.html" >Contact Us</a>
+                    <a href="contact.html" >Support Center</a>
+                </div>
+                <div id="footer_services">
+                    <h3>Our Services</h3>
+                    <a href="services.html#Web-Dev">Web Development</a>
+                    <a href="services.html#cyber">Cybersecurity</a>
+                    <a href="services.html#IT">IT Consulting</a>
+                </div>  
+            </div>
+            </div>
+
+            <p id="copyRight">&copy; 2025 Tech Vantage Solutions Agency Official Site. All rights reserved.</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger-icon');
+                const navLinks = document.querySelector('.nav-links');
+
+                if (hamburger && navLinks) {
+                    hamburger.addEventListener('click', function(e) {
+                        e.preventDefault(); 
+                        navLinks.classList.toggle('active'); 
+                    });
+                }
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+ 
+                    if (entry.isIntersecting) {
+                
+                        entry.target.classList.add('scroll-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 
+            });
+
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            
+            animatedElements.forEach((el) => {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+</html>

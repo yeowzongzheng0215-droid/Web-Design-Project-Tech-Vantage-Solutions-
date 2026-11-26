@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Portfolio - Tech Vantage Solutions</title>
+    <link rel="icon" type="image/png" href="images/title_logo.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+        <header>
+            <img src="images/logo.png" alt="Tech Vantage Solutions Logo">
+        </header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Tech Vantage Solutions</a> 
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" class="nav-active">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+        <section class="portfolio-banner">
+            <div class="portfolio-banner-content">
+                <h1 class="portfolio-banner-title">Our Portfolio</h1>
+                <p class="portfolio-banner-subtitle">
+                    A selection of projects that demonstrate our skills, creativity, and technical expertise.
+                </p>
+            </div>
+        </section>
+    <main class="portfolio-main">
+
+        <section class="portfolio-grid">
+            
+            <article class="portfolio-card">
+                <div class="portfolio-card-image">
+                    <img src="images/portfolio-ecommerce.png" alt="E-Commerce Platform">
+                </div>
+                <div class="portfolio-card-content">
+                    <h3 class="portfolio-card-title">E-Commerce Platform for Retail</h3>
+                    <p class="portfolio-card-text">An online shopping platform designed to help retailers sell products seamlessly.</p>
+                    <p class="portfolio-card-text"><strong>Technologies:</strong> HTML5, CSS3, JavaScript</p>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card-image">
+                    <img src="images/portfolio-chatbot.png" alt="Smart Chatbot Assistant">
+                </div>
+                <div class="portfolio-card-content">
+                    <h3 class="portfolio-card-title">Smart Chatbot Assistant</h3>
+                    <p class="portfolio-card-text">An AI-powered assistant providing 24/7 customer support through intelligent conversation.</p>
+                    <p class="portfolio-card-text"><strong>Technologies:</strong> Python, NLP, AI Integration</p>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card-image">
+                    <img src="images/portfolio-hr-dashboard.png" alt="HR Management Dashboard">
+                </div>
+                <div class="portfolio-card-content">
+                    <h3 class="portfolio-card-title">HR Management Dashboard</h3>
+                    <p class="portfolio-card-text">A management dashboard for companies to handle employee attendance and payroll efficiently.</p>
+                    <p class="portfolio-card-text"><strong>Technologies:</strong> React, SQL</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+        <footer>
+        <img src="images/footer_logo.png" alt="Tech Vantage Solutions Logo">
+        <h2>Your Vantage Point in Technology</h2>
+        <div class="footer_container">
+            <div id="footer_follow">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/" id="facebook"><b>𝐟 𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤</b></a>
+                <a href="https://www.instagram.com/" id="instagram"><b>🅾 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</b></a>
+                <a href="https://x.com/" id="twitter"><b>𝕏 Twitter</b></a>
+                <a href="https://www.linkedin.com/" id="linkedin"><b>[in] Linkedln</b></a>
+            </div>
+            <div id="footer_support">
+                <h3>Support Us</h3>
+                <a href="contact.html" >Contact Us</a>
+                <a href="contact.html" >Support Center</a>
+            </div>
+            <div id="footer_services">
+                <h3>Our Services</h3>
+                <a href="services.html#Web-Dev">Web Development</a>
+                <a href="services.html#cyber">Cybersecurity</a>
+                <a href="services.html#IT">IT Consulting</a>
+            </div>  
+        </div>
+        <p id="copyRight">&copy; 2025 Tech Vantage Solutions Agency Official Site. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            
+            const hamburger = document.querySelector('.hamburger-icon');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+           const textElements = document.querySelectorAll('.portfolio-banner-title, .portfolio-banner-subtitle');
+
+        if (textElements.length > 0) {
+            textElements.forEach((el, index) => {
+
+                setTimeout(() => {
+                    el.classList.add('text-visible');
+                }, 100 + (index * 200)); 
+            });
+        }
+    });
+    </script>
+</body>
+</html>
+</body>
+</html>

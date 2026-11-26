@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Home - Tech Vantage Solutions </title>
+        <link rel="icon" type="image/png" href="images/title_logo.png">
+        <link rel="stylesheet" href="home.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" alt="Tech Vantage Solutions Logo">
+
+            <nav class="navbar">
+                <a href="index.html" class="logo">Tech Vantage Solutions</a> 
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-icon">
+                    &#9776; </label>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="home-main-banner">
+            <div id="home-content">
+                <h2>WELCOME TO Tech Vantage Solutions Agency</h2>
+                <h1 id="tagline1">SPECIALIZING IN SOFTWARE DEVELOPMENT AI - POWERED SERVICES IT TRAINING</h1>
+                <h1 id="tagline2">TechVantage Solutions</h1>
+            </div>
+        </main> 
+        <section class="home-brief_introduction">
+            <h2>Our Profile</h2>
+            <p>Founded with the goal of setting new benchmarks in the technology sector, TechVantage Solutions is your trusted partner for high-quality digital advancement. We help our clients stay ahead of the curve by building secure and resilient software infrastructures and strategically integrating advanced artificial intelligence solutions to drive smarter decision-making. Recognizing that human capital is key to technological success, we also provide comprehensive professional IT training designed to empower teams and businesses to navigate the complexities of the modern digital world with confidence.</p>
+            <a href="services.html" class="home-button">Learn More</a>
+        </section>
+        <footer>
+            <img src="images/footer_logo.png" alt="Tech Vantage Solutions Logo">
+            <h2>Your Vantage Point in Technology</h2>
+            <div class="footer_container">
+                <div id="footer_follow">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/" id="facebook"><b>𝐟 𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤</b></a>
+                    <a href="https://www.instagram.com/" id="instagram"><b>🅾 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</b></a>
+                    <a href="https://x.com/" id="twitter"><b>𝕏 Twitter</b></a>
+                    <a href="https://www.linkedin.com/" id="linkedin"><b>[in] Linkedln</b></a>
+                </div>
+                <div id="footer_support">
+                    <h3>Support Us</h3>
+                    <a href="contact.html" >Contact Us</a>
+                    <a href="contact.html" >Support Center</a>
+                </div>
+                <div id="footer_services">
+                    <h3>Our Services</h3>
+                    <a href="services.html#Web-Dev">Web Development</a>
+                    <a href="services.html#cyber">Cybersecurity</a>
+                    <a href="services.html#IT">IT Consulting</a>
+                </div>  
+            </div>
+            <p id="copyRight">&copy; 2025 Tech Vantage Solutions Agency Official Site. All rights reserved.</p>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger-icon');
+                const navLinks = document.querySelector('.nav-links');
+
+                if (hamburger && navLinks) {
+                    hamburger.addEventListener('click', function(e) {
+                        e.preventDefault(); 
+                        navLinks.classList.toggle('active'); 
+                    });
+                }
+            });
+
+            const bannerElements = document.querySelectorAll('#home-content h2, #tagline1, #tagline2');
+            if (bannerElements.length > 0) {
+                
+                bannerElements.forEach((el, index) => {
+                    
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(50px)';
+                    el.style.transition = 'all 0.8s ease-out'; 
+
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, 300 + (index * 200)); 
+                });
+            };
+        </script>
+    </body>
+</html>

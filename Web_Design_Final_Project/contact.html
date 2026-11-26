@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Us - TechVantage Solutions</title>
+        <link rel="icon" type="image/png" href="images/title_logo.png">
+        
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="contact.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+         <header>
+            <img src="images/logo.png" alt="Tech Vantage Solutions Logo">
+
+            <nav class="navbar">
+                <a href="index.html" class="logo">Tech Vantage Solutions</a> 
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-icon">
+                    &#9776; </label>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="nav-active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contact-main">
+
+            <h2 class="contact-title">Contact Us</h2>
+
+            <div class="contact-container">
+
+                <div class="contact-card">
+                    <h3>Contact Form</h3> <form class="contact-form" onsubmit="showContactPopup(event)">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-card contact-info">
+                    <h3>Our Office</h3>     
+                    <p>
+                        <strong>Address:</strong><br>
+                        New Era University College,<br>
+                        Blok B&C, Lot 5, Seksyen 10,<br>
+                        Jalan Bukit, Taman Bukit Mewah,<br>
+                        43000 Kajang, Selangor
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong> techvantagesolutions@gmail.com<br>
+                        <strong>Phone:</strong> +603-8739 2770
+                    </p>
+
+                   <div class="contact-map-container" style="width: 100%; height: 450px; margin-top: 20px;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.3991240769387!2d101.79019047509189!3d2.986604254130084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdcb841d3762c7%3A0x4dc97330d731c530!2sNew%20Era%20University%20College!5e0!3m2!1sen!2smy!4v1766731537036!5m2!1sen!2smy" alt="Map with our address" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <div id="contactPopup" class="contact-popup-overlay">
+            <div class="contact-popup-box">
+                <h3>Message Sent ✅</h3>
+                <p>Thank you for contacting TechVantage Solutions.<br>We will get back to you soon.</p>
+                <button onclick="closeContactPopup()" style="background: rgb(249, 100, 0); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">OK</button>
+            </div>
+        </div>
+
+        <footer>
+            <img src="images/footer_logo.png" alt="Tech Vantage Solutions Logo">
+            <h2>Your Vantage Point in Technology</h2>
+            <div class="footer_container">
+                 <div id="footer_follow">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/" id="facebook"><b>𝐟 𝐟𝐚𝐜𝐞𝐛𝐨𝐨𝐤</b></a>
+                    <a href="https://www.instagram.com/" id="instagram"><b>🅾 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</b></a>
+                    <a href="https://x.com/" id="twitter"><b>𝕏 Twitter</b></a>
+                    <a href="https://www.linkedin.com/" id="linkedin"><b>[in] Linkedln</b></a>
+                </div>
+                <div id="footer_support">
+                    <h3>Support Us</h3>
+                    <a href="contact.html" >Contact Us</a>
+                    <a href="contact.html" >Support Center</a>
+                </div>
+                <div id="footer_services">
+                    <h3>Our Services</h3>
+                    <a href="services.html#Web-Dev">Web Development</a>
+                    <a href="services.html#cyber">Cybersecurity</a>
+                    <a href="services.html#IT">IT Consulting</a>
+                </div> 
+            </div>
+            <p id="copyRight">© 2025 Tech Vantage Solutions Agency Official Site. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function showContactPopup(event) {
+                event.preventDefault(); 
+                document.getElementById("contactPopup").style.display = "flex";
+            }
+
+            function closeContactPopup() {
+                document.getElementById("contactPopup").style.display = "none";
+            }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger-icon');
+                const navLinks = document.querySelector('.nav-links');
+
+                if (hamburger && navLinks) {
+                    hamburger.addEventListener('click', function(e) {
+                        e.preventDefault(); 
+                        navLinks.classList.toggle('active'); 
+                    });
+                }
+            });
+        </script>
+
+    </body>
+</html>

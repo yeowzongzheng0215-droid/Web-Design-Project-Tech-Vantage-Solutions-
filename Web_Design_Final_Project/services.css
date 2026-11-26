@@ -1,0 +1,321 @@
+.services-main {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.services-banner-title {
+    font-size: 2.5rem !important;
+}
+
+.services-banner-subtitle {
+    font-size: 1.2rem !important;
+}
+
+.services-banner {
+    background-color: #1a1f2e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-banner-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: rgb(249, 100, 0);
+}
+
+.services-banner-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.services-grid-section {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.services-grid-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    border-top: 4px solid rgb(249, 100, 0);
+}
+
+.services-grid-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(249, 100, 0, 0.15);
+}
+
+@keyframes icon-shake {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-15deg); } 
+    40% { transform: rotate(15deg); } 
+    60% { transform: rotate(-10deg); } 
+    80% { transform: rotate(10deg); } 
+    100% { transform: rotate(0deg); } 
+}
+
+.services-grid-card:hover .services-card-icon {
+    animation: icon-shake 1s ease-in-out infinite; 
+    color: rgb(249, 100, 0); 
+}
+
+.services-card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.services-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.services-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.services-card-features {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.services-card-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.services-card-features li:before {
+    content: "✓";
+    color: rgb(249, 100, 0);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.services-card-features li:last-child {
+    border-bottom: none;
+}
+
+.services-cta {
+    background-color: #1a1f2e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0 0 0;
+}
+.services-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-cta-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services-cta-text {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.services-cta-button {
+    display: inline-block;
+    background-color: rgb(249, 100, 0);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(249, 100, 0);
+}
+
+.services-cta-button:hover {
+    background-color: transparent;
+    color: rgb(249, 100, 0);
+    transform: scale(1.05);
+}
+
+/* -------------------- Phone -------------------- */
+@media (min-width: 768px) {
+    .services-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-banner {
+        padding: 60px 20px;
+    }
+    
+    .services-banner-title {
+        font-size: 3rem;
+    }
+    
+    .services-banner-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .services-grid-section {
+        padding: 60px 20px;
+    }
+    
+    .services-grid-card {
+        padding: 35px 30px;
+    }
+    
+    .services-card-title {
+        font-size: 1.7rem;
+    }
+    
+    .services-card-description {
+        font-size: 1.1rem;
+    }
+    
+    .services-cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .services-cta-text {
+        font-size: 1.3rem;
+    }
+    
+    .services-cta-button {
+        padding: 18px 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* -------------------- Tablet -------------------- */
+@media (min-width: 1024px) {
+    .services-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .services-banner {
+        padding: 100px 20px;
+    }
+    
+    .services-banner-title {
+        font-size: 3.5rem;
+    }
+    
+    .services-banner-subtitle {
+        font-size: 1.6rem;
+    }
+    
+    
+    .services-grid-section {
+        padding: 80px 20px;
+    }
+    
+    .services-grid-card {
+        padding: 40px 35px;
+    }
+    
+    .services-card-icon {
+        font-size: 3.5rem;
+    }
+    
+    .services-card-title {
+        font-size: 1.9rem;
+    }
+    
+    .services-card-description {
+        font-size: 1.2rem;
+    }
+    
+    .services-cta {
+        padding: 80px 20px;
+    }
+    
+    .services-cta-title {
+        font-size: 3rem;
+    }
+    
+    .services-cta-text {
+        font-size: 1.4rem;
+    }
+    
+    .services-cta-button {
+        padding: 20px 50px;
+        font-size: 1.3rem;
+    }
+}
+
+/* -------------------- Destop -------------------- */
+@media (min-width: 1440px) {
+    .services-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1400px;
+        margin: 0 auto;
+        gap: 40px;
+    }
+    
+    .services-banner-content,
+    .services-cta-container {
+        max-width: 1400px;
+    }
+    
+    .services-banner-title {
+        font-size: 4rem;
+    }
+    
+    .services-banner-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    
+    .services-grid-card {
+        padding: 45px 40px;
+    }
+    
+    .services-card-icon {
+        font-size: 4rem;
+    }
+    
+    .services-card-title {
+        font-size: 2.1rem;
+    }
+    
+    .services-card-description {
+        font-size: 1.3rem;
+    }
+    
+    .services-cta-title {
+        font-size: 3.5rem;
+    }
+    
+    .services-cta-text {
+        font-size: 1.5rem;
+    }
+}
